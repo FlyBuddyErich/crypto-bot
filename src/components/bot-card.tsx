@@ -37,17 +37,20 @@ export function BotCard({ bot, timeRange, isSelected, onSelect }: BotCardProps) 
   );
 }
 
-function BotIcon({ name }: { name: string }) {
-  const botImages = {
-    green_bot: greenBot,
-    yellow_bot: yellowBot,
-    red_bot: redBot,
-    blue_bot: blueBot,
-    place_bot: placeBot,
-    orange_bot: orangeBot,
-  };
+type BotName = keyof typeof botImages;
 
-  const botImage = botImages[name] || placeBot; // Если имя не найдено, то будет выведено placeBot (по умолчанию)
+const botImages = {
+  green_bot: greenBot,
+  yellow_bot: yellowBot,
+  red_bot: redBot,
+  blue_bot: blueBot,
+  place_bot: placeBot,
+  orange_bot: orangeBot,
+};
+
+function BotIcon({ name }: { name: string }) {
+
+  const botImage = botImages[name as BotName] || placeBot; // Если имя не найдено, то будет выведено placeBot (по умолчанию)
 
   return (
     <div className="xs:w-32 xs:h-20 w-24 h-14 flex items-center justify-center">
