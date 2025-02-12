@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+    --breakpoint-xs: 29rem;
+    --breakpoint-xxs: 24rem;
+  }
+
+  body {
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+  }
