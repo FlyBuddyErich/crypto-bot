@@ -24,7 +24,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-[#1D2637] text-white font-sans pb-24">
       {/* Header */}
-      <header className="relative flex items-end justify-between p-4 pt-8 border-b border-none overflow-hidden">
+      <header className="relative flex items-end justify-between p-4 xs:pt-8 border-b border-none overflow-hidden">
         <button className="z-10">
           <Menu className="w-6 h-6 text-gray-500" />
         </button>
@@ -38,16 +38,16 @@ export default function Dashboard() {
       </header>
 
       {/* Trading Capital */}
-      <div className="p-4">
+      <div className="xs:p-4 pb-1 p-2">
         <div className="flex justify-between items-start">
           <div>
             <div className="text-gray-500 text-base font-medium">TRADING CAPITAL</div>
-            <div className="text-4xl xs:text-5xl font-normal">
+            <div className="text-3xl xs:text-5xl font-normal">
               {dashboardData.trading_capital.toFixed(5)}{" "}
               {dashboardData.trading_capital_currency.toUpperCase()}
             </div>
           </div>
-          <div className="flex flex-col gap-1 pt-6">
+          <div className="flex flex-col gap-1 xs:pt-6 pt-2">
             <div className="flex items-center gap-2 justify-between">
               <div className="text-gray-500 xs:text-base text-sm font-medium">
                 BALANCE:
