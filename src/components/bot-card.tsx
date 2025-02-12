@@ -53,7 +53,7 @@ function BotIcon({ name }: { name: string }) {
   const botImage = botImages[name as BotName] || placeBot; // Если имя не найдено, то будет выведено placeBot (по умолчанию)
 
   return (
-    <div className="xs:w-32 xs:h-20 w-22 h-12 flex items-center justify-center">
+    <div className="xs:w-32 xs:h-20 w-20 h-10 flex items-center justify-center">
       <img
         src={botImage}
         alt={name}

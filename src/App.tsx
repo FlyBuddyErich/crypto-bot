@@ -71,7 +71,7 @@ export default function Dashboard() {
       </div>
 
       {/* График */}
-      <div className="relative xs:h-64 h-40 w-full overflow-hidden bg-[#1D2637] mt-8">
+      <div className="relative xs:h-64 h-38 w-full overflow-hidden bg-[#1D2637] mt-8">
         <PerformanceChart bot={selectedBot} timeRange={timeRange} />
         <div
           className={`absolute bottom-32 left-1/2 -translate-x-1/2 text-2xl font-bold ${

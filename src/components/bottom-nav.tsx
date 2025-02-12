@@ -23,31 +23,31 @@ interface BottomNavProps {
 export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
   const navItems: NavItem[] = [
     {
-      icon: <img src={footerButton} alt="menu" className="w-9 h-9" />,
+      icon: <img src={footerButton} alt="menu" className="xs:w-9 xs:h-9 w-6 h-6" />,
       label: "Dashboard",
       isActive: activeTab === "dashboard",
       onClick: () => onTabChange("dashboard"),
     },
     {
-      icon: <img src={footerButton2} alt="menu2" className="w-9 h-9" />,
+      icon: <img src={footerButton2} alt="menu2" className="xs:w-9 xs:h-9 w-6 h-6" />,
       label: "Megabot",
       isActive: activeTab === "megabot",
       onClick: () => onTabChange("megabot"),
     },
     {
-      icon: <img src={footerButton3} alt="menu3" className="w-9 h-9" />,
+      icon: <img src={footerButton3} alt="menu3" className="xs:w-9 xs:h-9 w-6 h-6" />,
       label: "Bot market",
       isActive: activeTab === "market",
       onClick: () => onTabChange("market"),
     },
     {
-      icon: <img src={footerButton4} alt="menu4" className="w-9 h-9" />,
+      icon: <img src={footerButton4} alt="menu4" className="xs:w-9 xs:h-9 w-6 h-6" />,
       label: "Coin prices",
       isActive: activeTab === "prices",
       onClick: () => onTabChange("prices"),
     },
     {
-      icon: <img src={footerButton5} alt="menu5" className="w-9 h-9" />,
+      icon: <img src={footerButton5} alt="menu5" className="xs:w-9 xs:h-9 w-6 h-6" />,
       label: "Profile",
       isActive: activeTab === "profile",
       onClick: () => onTabChange("profile"),
@@ -61,7 +61,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
         <button key={item.label} onClick={item.onClick} className="relative flex flex-col items-center">
           {/* Кружок с уведомлением */}
           {item.badge && (
-            <span className="absolute -top-3 -right-2.5 bg-[#E19925] text-white text-sm font-semibold w-6 h-6 rounded-full flex items-center justify-center z-2">
+            <span className="absolute -top-3 xs:-right-2.5 -right-2 bg-[#E19925] text-white text-sm font-semibold xs:w-6 xs:h-6 w-5 h-5 rounded-full flex items-center justify-center z-2">
               {item.badge}
             </span>
           )}
