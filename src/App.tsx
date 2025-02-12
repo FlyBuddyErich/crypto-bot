@@ -74,7 +74,7 @@ export default function Dashboard() {
       <div className="relative xs:h-64 h-38 w-full overflow-hidden bg-[#1D2637] mt-8">
         <PerformanceChart bot={selectedBot} timeRange={timeRange} />
         <div
-          className={`absolute bottom-32 left-1/2 -translate-x-1/2 text-2xl font-bold ${
+          className={`absolute bottom-28 left-1/2 -translate-x-1/2 text-2xl font-bold ${
             selectedBot[timeRange] >= 0 ? "text-[#77A659]" : "text-[#BE3A77] z-2"
           }`}
         >
